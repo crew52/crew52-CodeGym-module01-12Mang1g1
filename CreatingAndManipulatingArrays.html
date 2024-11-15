@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creating and manipulating arrays</title>
+</head>
+<body>
+<form action="">
+    <label for="numberArray">Sample Screen</label> <br>
+    <input type="number" id="numberArray">
+    <button type="button" onclick="addNumberArray()">Add</button>
+    <button type="button" onclick="displayArray()">Display</button>
+    <hr>
+    <p id="display"></p>
+</form>
+<script>
+    let lengthArray = +prompt("Length Array: ")
+    let arrNumber = new Array(lengthArray);
+    let result = "";
+    // add
+    function addNumberArray() {
+        let number = document.getElementById("numberArray").value;
+        arrNumber.push(number);
+    }
+    // display
+    function displayArray() {
+        for (let i = 0; i < arrNumber.length; i++) {
+            if (arrNumber[i] == null){
+                continue;
+            }
+            result += document.getElementById("display").innerHTML = `Element ${i} = ${arrNumber[i]}` + "<br>";
+        }
+        document.write(result);
+    }
+
+
+</script>
+</body>
+</html>
