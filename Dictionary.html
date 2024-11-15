@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<script>
+    let input = prompt("Enter keyword: ");
+    let dictionaryEng = ["monkey", "pig", "fish"];
+    let dictionaryViet = ["Khi", "Heo", "Ca"];
+    let check = true;
+    for (let eng in dictionaryEng) {
+        if(input === dictionaryEng[eng]){
+            console.log(dictionaryViet[eng]);
+            check = false;
+            break
+        }
+    }
+    if (check) {
+        console.log("Khong thay gia tri trong mang");
+    }
+</script>
+</body>
+</html>
