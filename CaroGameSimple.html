@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caro game simple</title>
+</head>
+<body>
+<div>
+    <p id="caro"> </p>
+    <button type="button" id="changeValue" onclick="changeValue()"> Change Value </button>
+</div>
+<script>
+  let col = +prompt("Enter col");
+  let row = +prompt("Enter row");
+  let caroArray =[];
+
+  for (let i = 0; i < row; i++) {
+    caroArray[i] = [];
+    for (let j = 0; j < col; j++) {
+      caroArray[i][j] = 0;
+    }
+  }
+
+  function displayArray(){
+      let output = "";
+      for (let i = 0; i < row; i++) {
+          let rowOutput = "";
+          for (let j = 0; j < col; j++) {
+              rowOutput += caroArray[i][j] + " ";
+          }
+          output += rowOutput.trim() + "<br>";
+      }
+      document.getElementById("caro").innerHTML = output;
+  }
+  displayArray();
+  function changeValue() {
+      let col = +prompt("Enter col X");
+      let row = +prompt("Enter row x");
+      caroArray[row][col] = "x";
+      displayArray();
+  }
+
+</script>
+</body>
+</html>
