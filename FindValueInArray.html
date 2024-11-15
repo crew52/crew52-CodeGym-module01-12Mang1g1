@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find value in array</title>
+</head>
+<body>
+<script>
+  let find = +prompt("Enter Number: ");
+  let numberArray = [5,3,7,1,6,3];
+  let check = true;
+  for (let index in numberArray) {
+    if (find === numberArray[index]){
+      check = false;
+      break;
+    }
+  }
+  (check = true) ? console.log("Khong thay gia tri trong mang") :console.log("tim thay gia tri trong mang");
+</script>
+</body>
+</html>
